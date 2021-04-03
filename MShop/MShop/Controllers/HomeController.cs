@@ -22,7 +22,11 @@ namespace MShop.Controllers
         {
             return View();
         }
-
+        [Route("/ContactUs")]
+        public IActionResult ContactUs()
+        {
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();

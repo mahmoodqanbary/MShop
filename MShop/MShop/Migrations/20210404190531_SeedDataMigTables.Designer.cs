@@ -3,14 +3,16 @@ using MShop.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace MShop.Migrations
 {
     [DbContext(typeof(MShopDbContext))]
-    partial class MShopDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210404190531_SeedDataMigTables")]
+    partial class SeedDataMigTables
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -69,53 +71,6 @@ namespace MShop.Migrations
                     b.HasIndex("CategoryId");
 
                     b.ToTable("CategoryToProdacts");
-
-                    b.HasData(
-                        new
-                        {
-                            ProdactId = 1,
-                            CategoryId = 1
-                        },
-                        new
-                        {
-                            ProdactId = 1,
-                            CategoryId = 2
-                        },
-                        new
-                        {
-                            ProdactId = 1,
-                            CategoryId = 3
-                        },
-                        new
-                        {
-                            ProdactId = 2,
-                            CategoryId = 1
-                        },
-                        new
-                        {
-                            ProdactId = 2,
-                            CategoryId = 2
-                        },
-                        new
-                        {
-                            ProdactId = 2,
-                            CategoryId = 3
-                        },
-                        new
-                        {
-                            ProdactId = 3,
-                            CategoryId = 1
-                        },
-                        new
-                        {
-                            ProdactId = 3,
-                            CategoryId = 2
-                        },
-                        new
-                        {
-                            ProdactId = 3,
-                            CategoryId = 3
-                        });
                 });
 
             modelBuilder.Entity("MShop.Models.Item", b =>
@@ -126,7 +81,7 @@ namespace MShop.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<decimal>("Price")
-                        .HasColumnType("Money");
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<int>("QuantityInStock")
                         .HasColumnType("int");
@@ -134,26 +89,6 @@ namespace MShop.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Items");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Price = 3302.0m,
-                            QuantityInStock = 8
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Price = 854.0m,
-                            QuantityInStock = 5
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Price = 2500m,
-                            QuantityInStock = 3
-                        });
                 });
 
             modelBuilder.Entity("MShop.Models.Prodact", b =>
@@ -178,29 +113,6 @@ namespace MShop.Migrations
                         .IsUnique();
 
                     b.ToTable("Prodacts");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Description = "پارچه کرپ حریر مناسب فصل تابستان و برای دوخت شومیز و مانتو مناسب است",
-                            ItemId = 1,
-                            Name = "پارچه کرپ حریر"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Description = "پارچه نخی یک پارچه خنک و مناسب فصل تابستان است و برای دوخت بلوز شلوار و ماکسی بسیار مناسب است",
-                            ItemId = 2,
-                            Name = "پارچه نخی"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Description = "پارچه کرپ مازراتی اتو رفت دارد اما بسیار شیک و برای دوخت مانتوهای مجلسی و گران قیمت مناسب است و همینطور زیر دست لطیف و نرمی دارد",
-                            ItemId = 3,
-                            Name = "پارچه کرپ مازراتی"
-                        });
                 });
 
             modelBuilder.Entity("MShop.Models.CategoryToProdact", b =>

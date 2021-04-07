@@ -152,3 +152,4 @@ E:\Develpoer\Project\MShop\MShop\MShop\MShop\obj\Debug\netcoreapp3.1\Razor\Views
 E:\Develpoer\Project\MShop\MShop\MShop\MShop\obj\Debug\netcoreapp3.1\MShop.csprojAssemblyReference.cache
 E:\Develpoer\Project\MShop\MShop\MShop\MShop\obj\Debug\netcoreapp3.1\Razor\Views\Home\Details.cshtml.g.cs
 E:\Develpoer\Project\MShop\MShop\MShop\MShop\obj\Debug\netcoreapp3.1\Razor\Views\Home\ShowCart.cshtml.g.cs
+E:\Develpoer\Project\MShop\MShop\MShop\MShop\obj\Debug\netcoreapp3.1\Razor\Views\Components\ProductGroupsComponent.cshtml.g.cs

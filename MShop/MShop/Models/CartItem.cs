@@ -13,7 +13,7 @@ namespace MShop.Models
 
         public decimal GetTotalPrice()
         {
-            return Item.Price = Quantity;
+            return Item.Price * Quantity;
         }
     }
 } 

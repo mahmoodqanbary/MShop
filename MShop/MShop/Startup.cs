@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using MShop.Data;
+using MShop.Data.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,6 +30,7 @@ namespace MShop
             {
                 options.UseSqlServer("Data Source=.; Initial Catalog= MShopCore_DB; Integrated Security=true;");
             });
+            services.AddScoped<IGroupRepository, GroupRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

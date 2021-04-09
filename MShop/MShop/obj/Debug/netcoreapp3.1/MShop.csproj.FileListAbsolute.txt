@@ -155,3 +155,4 @@ E:\Develpoer\Project\MShop\MShop\MShop\MShop\obj\Debug\netcoreapp3.1\Razor\Views
 E:\Develpoer\Project\MShop\MShop\MShop\MShop\obj\Debug\netcoreapp3.1\Razor\Views\Components\ProductGroupsComponent.cshtml.g.cs
 E:\Develpoer\Project\MShop\MShop\MShop\MShop\obj\Debug\netcoreapp3.1\Razor\Views\Product\ShowProductByGroupId.cshtml.g.cs
 E:\Develpoer\Project\MShop\MShop\MShop\MShop\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_BoxProduct.cshtml.g.cs
+E:\Develpoer\Project\MShop\MShop\MShop\MShop\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Groups.cshtml.g.cs
